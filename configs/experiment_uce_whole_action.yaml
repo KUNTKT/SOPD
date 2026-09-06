@@ -1,0 +1,41 @@
+experiment_id: uce_whole_action
+code_version: agent_ssopd_v0
+dataset_version: alfworld_tw_2.1.1
+random_seed: 1010
+python: /scratch/ktang115/envs/bootstrap_alignment/bin/python
+
+model:
+  name: Qwen3-1.7B
+  path: /scratch/ktang115/models/Qwen3-1.7B
+  torch_dtype: bfloat16
+  device: cuda
+  local_files_only: true
+  use_cache: true
+  enable_thinking: false
+  adapter_path: /home/yiyangba/ssopd_paper_archive/data/ssopd05_alfworld_coldstart/coldstart_lora
+
+prompt:
+  few_shot: true
+  history_window: 12
+
+rollout:
+  backend: hf
+  max_new_tokens: 32
+  temperature: 1.0
+  top_p: 1.0
+  do_sample: true
+  seed: 2020
+
+scoring:
+  tau_a: 1.0
+  beta_max: 4.0
+  bisection_steps: 12
+  kl_targets: [0.02, 0.05]
+  batch_size: 32
+  gate_top1_diff: 0.10
+  gate_median_js: 0.01
+
+paths:
+  archive: /home/yiyangba/ssopd_paper_archive
+  reports_dir: /home/yiyangba/ssopd_paper_archive/reports/uce_whole_action
+  h4_control: /home/yiyangba/ssopd_paper_archive/reports/uce_counterfactual_logit/H4_control.jsonl

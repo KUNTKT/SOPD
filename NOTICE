@@ -1,0 +1,3 @@
+third_party/ contains vendored Python helpers copied from an internal SSOPD
+checkout (ssopd_agent, ssopd_math, ssopd_logits rollout/environments/stats).
+Only .py sources were copied. Experiment data, reports, and weights were not.

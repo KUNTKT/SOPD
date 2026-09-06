@@ -1,0 +1,129 @@
+{
+  "task_meta": {
+    "data_root": "/scratch/ktang115/cache/alfworld",
+    "split": "valid_unseen",
+    "limit": 100,
+    "n_tasks": 100,
+    "fingerprint": "63d833625fd097c4221f3ddbf2619cde465bd23961c47dbf4665aeb3eab42bdd"
+  },
+  "model": {
+    "name": "Qwen3-8B",
+    "path": "/scratch/ktang115/models/Qwen3-8B",
+    "adapter_path": null,
+    "layers": [
+      17,
+      18,
+      19
+    ]
+  },
+  "conditions": {
+    "H0": {
+      "metrics": {
+        "n_trajectories": 100,
+        "success_rate": 0.15,
+        "admissible_rate": 0.960056258790436,
+        "mean_steps": 35.55,
+        "n_tasks": 100,
+        "n_mixed_groups": 0,
+        "mixed_group_rate": 0.0,
+        "mixed_group_rate_ci": [
+          0.0,
+          0.03699480747600191
+        ],
+        "hit_max_steps_rate": 0.0,
+        "admissible_action_rate": 0.960056258790436,
+        "parse_ok_rate": 0.960056258790436,
+        "mean_tokens": 284.93
+      },
+      "gain_vs_h0_pp": 0.0,
+      "wall_s": 1546.205153465271
+    },
+    "B_uce": {
+      "metrics": {
+        "n_trajectories": 100,
+        "success_rate": 0.26,
+        "admissible_rate": 0.9540194884287454,
+        "mean_steps": 32.84,
+        "n_tasks": 100,
+        "n_mixed_groups": 0,
+        "mixed_group_rate": 0.0,
+        "mixed_group_rate_ci": [
+          0.0,
+          0.03699480747600191
+        ],
+        "hit_max_steps_rate": 0.0,
+        "admissible_action_rate": 0.9540194884287454,
+        "parse_ok_rate": 0.9540194884287454,
+        "mean_tokens": 284.99
+      },
+      "gain_vs_h0_pp": 11.000000000000002,
+      "wall_s": 1513.3659756183624
+    },
+    "N1": {
+      "metrics": {
+        "n_trajectories": 100,
+        "success_rate": 0.15,
+        "admissible_rate": 0.9649902750764101,
+        "mean_steps": 35.99,
+        "n_tasks": 100,
+        "n_mixed_groups": 0,
+        "mixed_group_rate": 0.0,
+        "mixed_group_rate_ci": [
+          0.0,
+          0.03699480747600191
+        ],
+        "hit_max_steps_rate": 0.0,
+        "admissible_action_rate": 0.9649902750764101,
+        "parse_ok_rate": 0.9649902750764101,
+        "mean_tokens": 290.05
+      },
+      "wall_s": 1610.7420740127563,
+      "gain_vs_h0_pp": 0.0,
+      "mean_alpha": 1.5
+    },
+    "N2": {
+      "metrics": {
+        "n_trajectories": 100,
+        "success_rate": 0.25,
+        "admissible_rate": 0.9512492382693479,
+        "mean_steps": 32.82,
+        "n_tasks": 100,
+        "n_mixed_groups": 0,
+        "mixed_group_rate": 0.0,
+        "mixed_group_rate_ci": [
+          0.0,
+          0.03699480747600191
+        ],
+        "hit_max_steps_rate": 0.0,
+        "admissible_action_rate": 0.9512492382693479,
+        "parse_ok_rate": 0.9512492382693479,
+        "mean_tokens": 286.31
+      },
+      "wall_s": 1593.8341403007507,
+      "gain_vs_h0_pp": 10.0,
+      "gain_vs_uce_pp": -1.0000000000000009,
+      "mean_alpha": 1.5
+    }
+  },
+  "analysis": {
+    "n1_vs_h0_pp": 0.0,
+    "n2_vs_uce_pp": -1.0000000000000009,
+    "bootstrap_n1_vs_h0": {
+      "mean": 0.0,
+      "ci_lo": -0.04,
+      "ci_hi": 0.04,
+      "n_tasks": 100
+    },
+    "bootstrap_n2_vs_uce": {
+      "mean": -0.01,
+      "ci_lo": -0.05,
+      "ci_hi": 0.04,
+      "n_tasks": 100
+    },
+    "n1_pass": false,
+    "n2_pass": false,
+    "gate_pass": false,
+    "min_delta_pp": 5.0,
+    "distill": "only_if_gate_and_teacher_has_npm"
+  }
+}

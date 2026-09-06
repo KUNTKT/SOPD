@@ -1,0 +1,47 @@
+experiment_id: ssopd03_qwen3_1_7b_gsm8k_confirm_alpha
+code_version: ssopd_math_v0
+dataset_version: gsm8k_v1
+random_seed: 42
+python: /scratch/ktang115/envs/bootstrap_alignment/bin/python
+model:
+  name: Qwen3-1.7B
+  path: /scratch/ktang115/models/Qwen3-1.7B
+  variant: post-trained
+  revision: local
+  torch_dtype: bfloat16
+  device_map: null
+  device: cuda
+  use_cache: true
+  local_files_only: true
+  temperature: 1.0
+  top_p: 0.95
+  max_new_tokens: 2048
+  do_sample: true
+paths:
+  root: /home/yiyangba/ssopd_paper_archive/gsm8k
+  data: data
+  reports: reports
+  data_dir: data/ssopd03_qwen3_1_7b_gsm8k_confirm_alpha
+  rollouts: data/ssopd01_qwen3_1_7b_gsm8k_1k/rollouts.jsonl
+  directions: data/ssopd02_qwen3_1_7b_gsm8k_1k/directions.npz
+  splits: data/ssopd02_qwen3_1_7b_gsm8k_1k/splits.json
+  reports_dir: reports/ssopd03_qwen3_1_7b_gsm8k_confirm_alpha
+  report_md: reports/ssopd03_qwen3_1_7b_gsm8k_confirm_alpha_report.md
+  protocol_log: gsm8k_confirm_alpha.log
+audit_batch_size: 48
+ssopd03:
+  iterate_note: 'GSM8K confirm~200 L14 v_cap α∈{0.5,1.5,2.0}; primary=both-finished gain'
+  layer_pick: middle
+  layer_index: 14
+  alpha_mode: absolute
+  alpha_grid:
+  - 0.5
+  - 1.5
+  - 2.0
+  sweep_alpha: true
+  selection_max_problems: 200
+  audit_batch_size: 48
+  direction_variant: task_balanced_paired
+  direction_vector: v_cap
+  direction_key: layer_14_task_balanced_paired_v_cap
+  inject_mode: contrastive_cap

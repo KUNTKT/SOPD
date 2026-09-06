@@ -1,0 +1,70 @@
+experiment_id: dvpd_s0
+code_version: dvpd_s0_v1
+dataset_version: alfworld_tw_2.1.1
+python: /scratch/ktang115/envs/bootstrap_alignment/bin/python
+sample_seed: 6060
+sample_n: 60
+pair_seeds: [0, 1]
+K: 8
+n_boot: 10000
+bootstrap_seed: 7070
+forbidden_splits: [valid_unseen]
+
+model:
+  name: Qwen3-1.7B
+  path: /scratch/ktang115/models/Qwen3-1.7B
+  torch_dtype: bfloat16
+  device: cuda
+  local_files_only: true
+  use_cache: true
+  enable_thinking: false
+  adapter_path: /home/yiyangba/ssopd_paper_archive/data/ssopd05_alfworld_coldstart/coldstart_lora
+
+env:
+  data_root: /scratch/ktang115/cache/alfworld
+  task_types: [1, 2, 3, 4, 5, 6]
+  train_limit: 1200
+
+prompt:
+  few_shot: true
+  history_window: 12
+
+rollout:
+  backend: hf
+  max_steps: 40
+  max_new_tokens: 32
+  temperature: 1.0
+  top_p: 1.0
+  do_sample: true
+  batch_size: 1
+  seed: 2020
+  env_workers: 1
+
+steering:
+  layer: 14
+  inject_style: none
+
+vllm:
+  gpu_memory_utilization: 0.35
+  max_model_len: 4096
+  max_lora_rank: 32
+  fork_group: 6
+
+gate:
+  min_fork_states: 50
+  min_tasks: 30
+  mean_min: 0.10
+  large_pos_min: 30
+  large_delta: 0.25
+  accept_min: 0.95
+
+paths:
+  archive: /home/yiyangba/ssopd_paper_archive
+  reports_dir: /home/yiyangba/ssopd_paper_archive/reports/dvpd_s0
+  data_dir: /home/yiyangba/ssopd_paper_archive/data/dvpd_s0
+  uce_library_evolved: /home/yiyangba/ssopd_paper_archive/data/ssopd05_agent_ssopd/uce_library_evolved.json
+  evolve_jsonl: /home/yiyangba/ssopd_paper_archive/reports/uce_alfworld/B_uce_evolve.jsonl
+  provenance: /home/yiyangba/ssopd_paper_archive/reports/uce_opd/provenance.json
+  task_splits_cache: /home/yiyangba/ssopd_paper_archive/reports/uce_opd/task_splits_cache.json
+  tame_manifest: /home/yiyangba/ssopd_paper_archive/reports/tame_opd/task_manifest.json
+  coldstart_adapter: /home/yiyangba/ssopd_paper_archive/data/ssopd05_alfworld_coldstart/coldstart_lora

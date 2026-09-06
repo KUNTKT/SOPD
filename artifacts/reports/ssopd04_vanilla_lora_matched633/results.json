@@ -1,0 +1,49 @@
+{
+  "protocol": "q4_offline_lora_sft_teacher_correct",
+  "n_teacher_correct": 633,
+  "n_train": 570,
+  "n_val": 63,
+  "epochs": 2,
+  "lr": 0.0002,
+  "lora_r": 16,
+  "max_new_tokens": 2048,
+  "base_eval": {
+    "n": 400,
+    "accuracy": 0.5175,
+    "parse_rate": 1.0,
+    "mean_length": 1715.75,
+    "wall_s": 1556.1945633888245
+  },
+  "train": {
+    "history": [
+      {
+        "epoch": 0,
+        "train_loss": 0.10700882351385396,
+        "val_loss": 0.10328877944913176
+      },
+      {
+        "epoch": 1,
+        "train_loss": 0.0881147296429334,
+        "val_loss": 0.10865230642495648
+      }
+    ],
+    "best_val_loss": 0.10328877944913176,
+    "wall_s": 153.18188428878784
+  },
+  "post_eval": {
+    "n": 400,
+    "accuracy": 0.57,
+    "parse_rate": 1.0,
+    "mean_length": 1755.595,
+    "wall_s": 1744.6156122684479
+  },
+  "accuracy_gain_pp": 5.249999999999999,
+  "bootstrap_gain": {
+    "mean_pp": 5.25,
+    "ci_low_pp": 1.5,
+    "ci_high_pp": 9.0,
+    "n_tasks": 400
+  },
+  "status": "PASS",
+  "gate_pass_ge_2pp": true
+}

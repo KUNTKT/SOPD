@@ -1,0 +1,17 @@
+{
+  "n_tasks": 358,
+  "n_paired": 187,
+  "n_trajectories": 1432,
+  "success_rate": 0.3973463687150838,
+  "n_paired_used": 3632,
+  "fallback_count": 0,
+  "v_cap_norm": 2.4914894104003906,
+  "cosine_to_math_nothink": 0.05454541691300146,
+  "direction_key": "layer_14_task_balanced_paired_v_cap",
+  "pairing": "step_admissible",
+  "site": "action_boundary",
+  "output_npz": "/home/yiyangba/ssopd_paper_archive/data/ssopd05_alfworld/directions_r1a_step_admissible.npz",
+  "layer": 14,
+  "extract_wall_s": 2005.6593832969666,
+  "direction_smoke": {}
+}

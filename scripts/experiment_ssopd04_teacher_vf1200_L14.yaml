@@ -1,0 +1,35 @@
+experiment_id: ssopd04_teacher_vf1200_L14_a1_5
+code_version: ssopd_math_v0
+dataset_version: math_lighteval_v1
+random_seed: 42
+python: /scratch/ktang115/envs/bootstrap_alignment/bin/python
+model:
+  name: Qwen3-1.7B
+  path: /scratch/ktang115/models/Qwen3-1.7B
+  variant: post-trained
+  revision: local
+  torch_dtype: bfloat16
+  device_map: null
+  device: cuda
+  use_cache: true
+  local_files_only: true
+  temperature: 1.0
+  top_p: 0.95
+  max_new_tokens: 2048
+  do_sample: true
+paths:
+  root: /scratch/ktang115/SSOPD/ssopd_math
+  data: data
+  reports: reports
+  rollouts: data/ssopd01_qwen3_1_7b_scale2k/rollouts.jsonl
+  directions: data/ssopd02_qwen3_1_7b_scale2k/directions.npz
+  splits: data/ssopd02_qwen3_1_7b_scale2k/splits.json
+audit_batch_size: 48
+ssopd03:
+  iterate_note: 'Q4 MVP: steered teacher traj on vector_fit1200; α=1.5 (best overall on trunc-gate confirm)'
+  layer_index: 14
+  alpha_grid:
+  - 1.5
+  audit_batch_size: 48
+  direction_key: layer_14_task_balanced_paired_v_cap
+  inject_mode: contrastive_cap

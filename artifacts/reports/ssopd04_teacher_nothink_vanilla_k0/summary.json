@@ -1,0 +1,8 @@
+{
+  "n": 1200,
+  "n_correct": 795,
+  "accuracy": 0.6625,
+  "mean_length": 743.6275,
+  "source": "/home/yiyangba/ssopd_paper_archive/data/ssopd01_qwen3_1_7b_nothink_vf1200/rollouts.jsonl",
+  "protocol": "k0_one_shot_nothink"
+}

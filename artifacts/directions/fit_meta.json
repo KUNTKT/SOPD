@@ -1,0 +1,33 @@
+{
+  "n_tasks": 358,
+  "n_paired": 187,
+  "n_trajectories": 1432,
+  "success_rate": 0.3973463687150838,
+  "n_paired_used": 185,
+  "fallback_count": 0,
+  "v_cap_norm": 2.117605209350586,
+  "cosine_to_math_nothink": 0.029227548937837206,
+  "cosine_to_episode_v": 0.13252097871891455,
+  "direction_key": "layer_14_task_balanced_paired_v_cap",
+  "pairing": "late_divergent",
+  "site": "agg",
+  "output_npz": "/home/yiyangba/ssopd_paper_archive/data/ssopd05_alfworld/directions_b3_late_divergent.npz",
+  "layer": 14,
+  "extract_wall_s": 16.37355089187622,
+  "direction_smoke": {},
+  "n_pairs_extracted": 185,
+  "mean_t_star": 1.5243243243243243,
+  "mean_t_act": 0.5243243243243243,
+  "frac_t0": 0.0,
+  "t_star_hist": {
+    "1": 144,
+    "2": 17,
+    "3": 14,
+    "4": 1,
+    "5": 3,
+    "6": 3,
+    "7": 2,
+    "11": 1
+  },
+  "extract_site_note": "first prompt_text diverge (typically t_act+1)"
+}

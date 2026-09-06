@@ -1,0 +1,51 @@
+{
+  "protocol": "q4_offline_lora_sft_teacher_correct",
+  "n_teacher_correct": 795,
+  "n_train": 716,
+  "n_val": 79,
+  "epochs": 2,
+  "lr": 0.0002,
+  "lora_r": 16,
+  "max_new_tokens": 2048,
+  "no_thinking": true,
+  "base_eval": {
+    "n": 400,
+    "accuracy": 0.6825,
+    "parse_rate": 1.0,
+    "mean_length": 757.0575,
+    "wall_s": 0.0,
+    "source": "ssopd03_math_L14_nothink_confirm clean"
+  },
+  "train": {
+    "history": [
+      {
+        "epoch": 0,
+        "train_loss": 0.11037279915340328,
+        "val_loss": 0.1142365024248256
+      },
+      {
+        "epoch": 1,
+        "train_loss": 0.09319843488222498,
+        "val_loss": 0.12024034531433371
+      }
+    ],
+    "best_val_loss": 0.1142365024248256,
+    "wall_s": 183.35300421714783
+  },
+  "post_eval": {
+    "n": 400,
+    "accuracy": 0.67,
+    "parse_rate": 1.0,
+    "mean_length": 1034.9125,
+    "wall_s": 1456.3533222675323
+  },
+  "accuracy_gain_pp": -1.2499999999999956,
+  "bootstrap_gain": {
+    "mean_pp": -1.25,
+    "ci_low_pp": -4.75,
+    "ci_high_pp": 2.25,
+    "n_tasks": 400
+  },
+  "status": "ITERATE",
+  "gate_pass_ge_2pp": false
+}

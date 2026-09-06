@@ -1,0 +1,9 @@
+{
+  "n": 1200,
+  "accuracy": 0.685,
+  "parse_rate": 1.0,
+  "hit_max_frac": 0.11416666666666667,
+  "mean_length": 842.1408333333334,
+  "wall_s": 4317.802391529083,
+  "traj_path": "/home/yiyangba/ssopd_paper_archive/reports/ssopd04_teacher_nothink_L14_am1_5/teacher_trajectories.jsonl"
+}

@@ -1,0 +1,50 @@
+experiment_id: ssopd01_qwen3_1_7b_gsm8k_1k
+code_version: ssopd_math_v0
+dataset_version: gsm8k_v1
+random_seed: 42
+python: /scratch/ktang115/envs/bootstrap_alignment/bin/python
+model:
+  name: Qwen3-1.7B
+  path: /scratch/ktang115/models/Qwen3-1.7B
+  variant: post-trained
+  revision: local
+  torch_dtype: bfloat16
+  device_map: null
+  device: cuda
+  use_cache: true
+  local_files_only: true
+  temperature: 1.0
+  top_p: 0.95
+  max_new_tokens: 2048
+  do_sample: true
+dataset:
+  source: openai/gsm8k
+  cache_dir: /home/yiyangba/hf_cache/datasets
+  instruction_suffix: Let's think step by step and output the final answer within \boxed{}.
+  split_name: train
+rollout:
+  n_problems: 1000
+  group_size: 8
+  resume: true
+  backend: hf
+  batch_size: 32
+splits:
+  vector_fit_frac: 0.6
+  selection_frac: 0.2
+  confirm_frac: 0.2
+  split_seed: 42
+paths:
+  root: /home/yiyangba/ssopd_paper_archive/gsm8k
+  data: data
+  reports: reports
+  problems: data/ssopd01_qwen3_1_7b_gsm8k_1k/problems.json
+  rollouts: data/ssopd01_qwen3_1_7b_gsm8k_1k/rollouts.jsonl
+  reports_dir: reports/ssopd01_qwen3_1_7b_gsm8k_1k
+  report_md: reports/ssopd01_qwen3_1_7b_gsm8k_1k_report.md
+ssopd01:
+  pass_criteria:
+    min_parse_rate: 0.5
+    min_mixed_problems: 10
+    success_rate_lo: 0.05
+    success_rate_hi: 0.95
+    min_completion_rate: 0.9

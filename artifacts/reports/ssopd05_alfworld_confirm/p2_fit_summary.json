@@ -1,0 +1,14 @@
+{
+  "n_tasks": 358,
+  "n_paired": 187,
+  "n_trajectories": 1432,
+  "success_rate": 0.3973463687150838,
+  "n_paired_used": 187,
+  "fallback_count": 0,
+  "v_cap_norm": 13.349332809448242,
+  "cosine_to_math_nothink": -0.025903892279993245,
+  "direction_key": "layer_14_task_balanced_paired_v_cap",
+  "layer": 14,
+  "extract_wall_s": 128.42251467704773,
+  "direction_smoke": {}
+}

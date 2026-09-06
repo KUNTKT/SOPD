@@ -1,0 +1,95 @@
+{
+  "task_meta": {
+    "data_root": "/scratch/ktang115/cache/alfworld",
+    "split": "valid_unseen",
+    "limit": 100,
+    "n_tasks": 100,
+    "fingerprint": "63d833625fd097c4221f3ddbf2619cde465bd23961c47dbf4665aeb3eab42bdd"
+  },
+  "conditions": {
+    "H0": {
+      "metrics": {
+        "n_trajectories": 100,
+        "success_rate": 0.29,
+        "admissible_rate": 0.8885186307179642,
+        "mean_steps": 33.01,
+        "n_tasks": 100,
+        "n_mixed_groups": 0,
+        "mixed_group_rate": 0.0,
+        "mixed_group_rate_ci": [
+          0.0,
+          0.03699480747600191
+        ],
+        "hit_max_steps_rate": 0.0,
+        "admissible_action_rate": 0.8885186307179642,
+        "parse_ok_rate": 0.8885186307179642,
+        "mean_tokens": 333.99
+      },
+      "out": "/home/yiyangba/ssopd_paper_archive/reports/agent_ssopd_hybrid/H0_base.jsonl",
+      "gain_pp": 0.0
+    },
+    "H1": {
+      "metrics": {
+        "n_trajectories": 100,
+        "success_rate": 0.26,
+        "admissible_rate": 0.9254307783719549,
+        "mean_steps": 33.66,
+        "n_tasks": 100,
+        "n_mixed_groups": 0,
+        "mixed_group_rate": 0.0,
+        "mixed_group_rate_ci": [
+          0.0,
+          0.03699480747600191
+        ],
+        "hit_max_steps_rate": 0.0,
+        "admissible_action_rate": 0.9254307783719549,
+        "parse_ok_rate": 0.9254307783719549,
+        "mean_tokens": 339.3
+      },
+      "wall_s": 1747.1673018932343,
+      "out": "/home/yiyangba/ssopd_paper_archive/reports/agent_ssopd_hybrid/H1_workflow.jsonl",
+      "gain_pp": -2.9999999999999973
+    },
+    "H2": {
+      "metrics": {
+        "n_trajectories": 100,
+        "success_rate": 0.29,
+        "admissible_rate": 0.9260282381829343,
+        "mean_steps": 32.58,
+        "n_tasks": 100,
+        "n_mixed_groups": 0,
+        "mixed_group_rate": 0.0,
+        "mixed_group_rate_ci": [
+          0.0,
+          0.03699480747600191
+        ],
+        "hit_max_steps_rate": 0.0,
+        "admissible_action_rate": 0.9260282381829343,
+        "parse_ok_rate": 0.9260282381829343,
+        "mean_tokens": 328.0
+      },
+      "wall_s": 1671.122328042984,
+      "out": "/home/yiyangba/ssopd_paper_archive/reports/agent_ssopd_hybrid/H2_workflow_npm.jsonl",
+      "gain_pp": 0.0
+    }
+  },
+  "analysis": {
+    "best_key": "H2",
+    "delta_success_pp": 0.0,
+    "bootstrap_vs_H0": {
+      "mean": 0.0,
+      "ci_lo": -0.1,
+      "ci_hi": 0.1,
+      "n_tasks": 100
+    },
+    "h2_minus_h1_pp": 2.9999999999999973,
+    "bootstrap_h2_vs_h1": {
+      "mean": 0.03,
+      "ci_lo": -0.01,
+      "ci_hi": 0.08,
+      "n_tasks": 100
+    },
+    "gate_pass": false,
+    "min_delta_pp": 5.0
+  }
+}

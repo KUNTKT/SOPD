@@ -1,0 +1,282 @@
+{
+  "task_meta": {
+    "data_root": "/scratch/ktang115/cache/alfworld",
+    "split": "valid_unseen",
+    "limit": 100,
+    "n_tasks": 100,
+    "fingerprint": "63d833625fd097c4221f3ddbf2619cde465bd23961c47dbf4665aeb3eab42bdd"
+  },
+  "conditions": {
+    "H0": {
+      "success_rate": 0.29,
+      "metrics": {
+        "n_trajectories": 100,
+        "success_rate": 0.29,
+        "admissible_rate": 0.8885186307179642,
+        "mean_steps": 33.01,
+        "n_tasks": 100,
+        "n_mixed_groups": 0,
+        "mixed_group_rate": 0.0,
+        "mixed_group_rate_ci": [
+          0.0,
+          0.03699480747600191
+        ],
+        "hit_max_steps_rate": 0.0,
+        "admissible_action_rate": 0.8885186307179642,
+        "parse_ok_rate": 0.8885186307179642,
+        "mean_tokens": 333.99
+      }
+    },
+    "B_uce": {
+      "success_rate": 0.4,
+      "metrics": {
+        "n_trajectories": 100,
+        "success_rate": 0.4,
+        "admissible_rate": 0.9096958174904943,
+        "mean_steps": 31.56,
+        "n_tasks": 100,
+        "n_mixed_groups": 0,
+        "mixed_group_rate": 0.0,
+        "mixed_group_rate_ci": [
+          0.0,
+          0.03699480747600191
+        ],
+        "hit_max_steps_rate": 0.0,
+        "admissible_action_rate": 0.9096958174904943,
+        "parse_ok_rate": 0.9096958174904943,
+        "mean_tokens": 315.74
+      }
+    },
+    "H4_control": {
+      "name": "H4_control",
+      "target_kl": 0.0,
+      "metrics": {
+        "n_trajectories": 100,
+        "success_rate": 0.38,
+        "admissible_rate": 0.8800130420606456,
+        "mean_steps": 30.67,
+        "n_tasks": 100,
+        "n_mixed_groups": 0,
+        "mixed_group_rate": 0.0,
+        "mixed_group_rate_ci": [
+          0.0,
+          0.03699480747600191
+        ],
+        "hit_max_steps_rate": 0.0,
+        "admissible_action_rate": 0.8800130420606456,
+        "parse_ok_rate": 0.8800130420606456,
+        "mean_tokens": 314.54
+      },
+      "success_rate": 0.38,
+      "wall_s": 2892.71950006485,
+      "mean_beta": 0.0,
+      "max_beta": 0.0,
+      "mean_achieved_kl_vs_uce": 0.0,
+      "first_action_kl_vs_uce": 0.0,
+      "first_action_kl_vs_base": 0.0004433730982858349,
+      "protocol_token_kl": 0.0,
+      "command_token_kl": 0.0,
+      "action_top1_flip_rate_vs_uce": 0.0,
+      "action_top1_flip_rate_vs_base": 0.0438815930313801,
+      "target_unreachable_rate": 0.0,
+      "mean_uce_entropy": 0.18180068843291505,
+      "mean_teacher_entropy": 0.18180068843291505,
+      "invalid_action_count": 3.68,
+      "episode_latency": 28.92003328561783
+    },
+    "uce_cf_logit_delta002": {
+      "name": "uce_cf_logit_delta002",
+      "target_kl": 0.02,
+      "metrics": {
+        "n_trajectories": 100,
+        "success_rate": 0.33,
+        "admissible_rate": 0.8701743462017435,
+        "mean_steps": 32.12,
+        "n_tasks": 100,
+        "n_mixed_groups": 0,
+        "mixed_group_rate": 0.0,
+        "mixed_group_rate_ci": [
+          0.0,
+          0.03699480747600191
+        ],
+        "hit_max_steps_rate": 0.0,
+        "admissible_action_rate": 0.8701743462017435,
+        "parse_ok_rate": 0.8701743462017435,
+        "mean_tokens": 328.15
+      },
+      "success_rate": 0.33,
+      "wall_s": 3087.654637813568,
+      "mean_beta": 1.3058225010942681,
+      "max_beta": 4.0,
+      "mean_achieved_kl_vs_uce": 0.008505956755365628,
+      "first_action_kl_vs_uce": 0.0004810089844795584,
+      "first_action_kl_vs_base": 0.0018731814587816078,
+      "protocol_token_kl": 0.0,
+      "command_token_kl": 0.008505956755365628,
+      "action_top1_flip_rate_vs_uce": 0.0172761960754114,
+      "action_top1_flip_rate_vs_base": 0.06073803714672688,
+      "target_unreachable_rate": 0.5937596258552409,
+      "mean_uce_entropy": 0.18763273677732809,
+      "mean_teacher_entropy": 0.1958233476942796,
+      "invalid_action_count": 4.17,
+      "episode_latency": 30.86926997423172
+    },
+    "uce_cf_logit_delta005": {
+      "name": "uce_cf_logit_delta005",
+      "target_kl": 0.05,
+      "metrics": {
+        "n_trajectories": 100,
+        "success_rate": 0.37,
+        "admissible_rate": 0.8408325681052954,
+        "mean_steps": 32.67,
+        "n_tasks": 100,
+        "n_mixed_groups": 0,
+        "mixed_group_rate": 0.0,
+        "mixed_group_rate_ci": [
+          0.0,
+          0.03699480747600191
+        ],
+        "hit_max_steps_rate": 0.0,
+        "admissible_action_rate": 0.8408325681052954,
+        "parse_ok_rate": 0.8408325681052954,
+        "mean_tokens": 333.73
+      },
+      "success_rate": 0.37,
+      "wall_s": 3093.0899527072906,
+      "mean_beta": 1.4023796251492755,
+      "max_beta": 4.0,
+      "mean_achieved_kl_vs_uce": 0.020221489590484965,
+      "first_action_kl_vs_uce": 0.0010815028700562833,
+      "first_action_kl_vs_base": 0.00305845901019419,
+      "protocol_token_kl": 0.0,
+      "command_token_kl": 0.020221489590484965,
+      "action_top1_flip_rate_vs_uce": 0.02927537266897363,
+      "action_top1_flip_rate_vs_base": 0.07276796082705099,
+      "target_unreachable_rate": 0.6143450826632534,
+      "mean_uce_entropy": 0.18859682147036047,
+      "mean_teacher_entropy": 0.2015436077389883,
+      "invalid_action_count": 5.2,
+      "episode_latency": 30.92362179994583
+    }
+  },
+  "analysis": {
+    "primary_control": "H4_control",
+    "decoder_token_match": false,
+    "best_condition": "uce_cf_logit_delta005",
+    "best_delta_pp": -1.0,
+    "gate_pass": false,
+    "min_delta_pp": 5.0,
+    "fail_kind": "invalid_or_entropy_worse",
+    "distill": "skip_unless_gate",
+    "library_file_sha256": "9513a8eb498fa7a73cb6965cecb0a85fe37eeba398bdff9d282a46cef5878c33",
+    "n_workflow_hashes": 100
+  },
+  "bootstrap": {
+    "uce_cf_logit_delta002": {
+      "vs_primary": {
+        "name": "H4_control",
+        "ci95": {
+          "mean": -0.05,
+          "ci_lo": -0.14,
+          "ci_hi": 0.03,
+          "ci": 0.95,
+          "n_tasks": 100,
+          "n_boot": 10000,
+          "wins": 7,
+          "losses": 12,
+          "ties": 81,
+          "delta_pp": -5.0
+        },
+        "ci975_bonferroni": {
+          "mean": -0.05,
+          "ci_lo": -0.15,
+          "ci_hi": 0.05,
+          "ci": 0.975,
+          "n_tasks": 100,
+          "n_boot": 10000,
+          "wins": 7,
+          "losses": 12,
+          "ties": 81,
+          "delta_pp": -5.0
+        }
+      },
+      "vs_B_uce": {
+        "mean": -0.07,
+        "ci_lo": -0.18,
+        "ci_hi": 0.04,
+        "ci": 0.95,
+        "n_tasks": 100,
+        "n_boot": 10000,
+        "wins": 14,
+        "losses": 21,
+        "ties": 65,
+        "delta_pp": -7.000000000000001
+      },
+      "vs_H0": {
+        "mean": 0.04,
+        "ci_lo": -0.07,
+        "ci_hi": 0.15,
+        "ci": 0.95,
+        "n_tasks": 100,
+        "n_boot": 10000,
+        "wins": 19,
+        "losses": 15,
+        "ties": 66,
+        "delta_pp": 4.0
+      }
+    },
+    "uce_cf_logit_delta005": {
+      "vs_primary": {
+        "name": "H4_control",
+        "ci95": {
+          "mean": -0.01,
+          "ci_lo": -0.1,
+          "ci_hi": 0.08,
+          "ci": 0.95,
+          "n_tasks": 100,
+          "n_boot": 10000,
+          "wins": 11,
+          "losses": 12,
+          "ties": 77,
+          "delta_pp": -1.0
+        },
+        "ci975_bonferroni": {
+          "mean": -0.01,
+          "ci_lo": -0.11,
+          "ci_hi": 0.1,
+          "ci": 0.975,
+          "n_tasks": 100,
+          "n_boot": 10000,
+          "wins": 11,
+          "losses": 12,
+          "ties": 77,
+          "delta_pp": -1.0
+        }
+      },
+      "vs_B_uce": {
+        "mean": -0.03,
+        "ci_lo": -0.15,
+        "ci_hi": 0.09,
+        "ci": 0.95,
+        "n_tasks": 100,
+        "n_boot": 10000,
+        "wins": 17,
+        "losses": 20,
+        "ties": 63,
+        "delta_pp": -3.0
+      },
+      "vs_H0": {
+        "mean": 0.08,
+        "ci_lo": -0.03,
+        "ci_hi": 0.19,
+        "ci": 0.95,
+        "n_tasks": 100,
+        "n_boot": 10000,
+        "wins": 21,
+        "losses": 13,
+        "ties": 66,
+        "delta_pp": 8.0
+      }
+    }
+  }
+}

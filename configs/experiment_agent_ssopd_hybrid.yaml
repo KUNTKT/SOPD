@@ -1,0 +1,52 @@
+experiment_id: agent_ssopd_hybrid
+code_version: agent_ssopd_v0
+dataset_version: alfworld_tw_2.1.1
+random_seed: 1010
+python: /scratch/ktang115/envs/bootstrap_alignment/bin/python
+
+model:
+  name: Qwen3-1.7B
+  path: /scratch/ktang115/models/Qwen3-1.7B
+  torch_dtype: bfloat16
+  device: cuda
+  local_files_only: true
+  use_cache: true
+  enable_thinking: false
+  adapter_path: /home/yiyangba/ssopd_paper_archive/data/ssopd05_alfworld_coldstart/coldstart_lora
+
+env:
+  data_root: /scratch/ktang115/cache/alfworld
+  eval_split: valid_unseen
+  eval_limit: 100
+  task_types: [1, 2, 3, 4, 5, 6]
+
+prompt:
+  few_shot: true
+  history_window: 12
+
+rollout:
+  backend: hf
+  max_steps: 40
+  max_new_tokens: 32
+  temperature: 1.0
+  top_p: 1.0
+  do_sample: true
+  batch_size: 1
+  seed: 2020
+  env_workers: 1
+
+steering:
+  layer: 14
+  inject_style: decision_point
+  top_k: 8
+  hybrid_alpha: 1.0
+  gate_min_delta_pp: 5.0
+  direction_key: layer_14_task_balanced_paired_v_cap
+
+paths:
+  archive: /home/yiyangba/ssopd_paper_archive
+  reports_dir: /home/yiyangba/ssopd_paper_archive/reports/agent_ssopd_hybrid
+  rollouts_select: /home/yiyangba/ssopd_paper_archive/data/ssopd05_alfworld_select_rollouts/rollouts.jsonl
+  memory_dir: /home/yiyangba/ssopd_paper_archive/data/ssopd05_agent_ssopd
+  workflows: /home/yiyangba/ssopd_paper_archive/data/ssopd05_agent_ssopd/workflows.json
+  h0_base: /home/yiyangba/ssopd_paper_archive/reports/agent_ssopd_alfworld/a1_teacher/base_custom_alpha0.jsonl

@@ -1,0 +1,11 @@
+{
+  "vector_fit_problems": 600,
+  "mixed_paired": 98,
+  "all_positive": 462,
+  "all_negative": 40,
+  "other": 0,
+  "traj_positive": 4164,
+  "traj_negative": 632,
+  "success_rate_vf": 0.8682235195996664,
+  "note": "task_balanced_paired 只在同一题同时有 POSITIVE 与 NEGATIVE 时才贡献方向。GSM8K 正确率高 → 大量 all-positive → paired 远小于 600。"
+}

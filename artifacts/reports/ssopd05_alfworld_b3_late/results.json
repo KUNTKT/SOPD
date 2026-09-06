@@ -1,0 +1,423 @@
+{
+  "task_meta": {
+    "data_root": "/scratch/ktang115/cache/alfworld",
+    "split": "valid_unseen",
+    "limit": 100,
+    "n_tasks": 100,
+    "fingerprint": "63d833625fd097c4221f3ddbf2619cde465bd23961c47dbf4665aeb3eab42bdd"
+  },
+  "conditions": {
+    "alpha0": {
+      "metrics": {
+        "n_trajectories": 100,
+        "success_rate": 0.39,
+        "admissible_rate": 0.9031219826198905,
+        "mean_steps": 31.07,
+        "n_tasks": 100,
+        "n_mixed_groups": 0,
+        "mixed_group_rate": 0.0,
+        "mixed_group_rate_ci": [
+          0.0,
+          0.03699480747600191
+        ],
+        "hit_max_steps_rate": 0.0,
+        "admissible_action_rate": 0.9031219826198905,
+        "parse_ok_rate": 0.9031219826198905,
+        "mean_tokens": 3156.24,
+        "by_task_type": {
+          "pick_and_place_simple": {
+            "n": 17,
+            "success_rate": 0.17647058823529413,
+            "admissible_rate": 0.8809917355371901
+          },
+          "pick_heat_then_place_in_recep": {
+            "n": 16,
+            "success_rate": 0.5,
+            "admissible_rate": 0.9056603773584906
+          },
+          "pick_clean_then_place_in_recep": {
+            "n": 26,
+            "success_rate": 0.38461538461538464,
+            "admissible_rate": 0.8845177664974619
+          },
+          "look_at_obj_in_light": {
+            "n": 13,
+            "success_rate": 0.5384615384615384,
+            "admissible_rate": 0.875
+          },
+          "pick_cool_then_place_in_recep": {
+            "n": 14,
+            "success_rate": 0.5,
+            "admissible_rate": 0.9458762886597938
+          },
+          "pick_two_obj_and_place": {
+            "n": 14,
+            "success_rate": 0.2857142857142857,
+            "admissible_rate": 0.949671772428884
+          }
+        }
+      },
+      "wall_s": 0.0,
+      "out": "/home/yiyangba/ssopd_paper_archive/reports/ssopd05_alfworld_b3_late/shared/alpha_p0.0.jsonl"
+    },
+    "v_episode": {
+      "grid": {
+        "0.0": {
+          "metrics": {
+            "n_trajectories": 100,
+            "success_rate": 0.39,
+            "admissible_rate": 0.9031219826198905,
+            "mean_steps": 31.07,
+            "n_tasks": 100,
+            "n_mixed_groups": 0,
+            "mixed_group_rate": 0.0,
+            "mixed_group_rate_ci": [
+              0.0,
+              0.03699480747600191
+            ],
+            "hit_max_steps_rate": 0.0,
+            "admissible_action_rate": 0.9031219826198905,
+            "parse_ok_rate": 0.9031219826198905,
+            "mean_tokens": 3156.24,
+            "by_task_type": {
+              "pick_and_place_simple": {
+                "n": 17,
+                "success_rate": 0.17647058823529413,
+                "admissible_rate": 0.8809917355371901
+              },
+              "pick_heat_then_place_in_recep": {
+                "n": 16,
+                "success_rate": 0.5,
+                "admissible_rate": 0.9056603773584906
+              },
+              "pick_clean_then_place_in_recep": {
+                "n": 26,
+                "success_rate": 0.38461538461538464,
+                "admissible_rate": 0.8845177664974619
+              },
+              "look_at_obj_in_light": {
+                "n": 13,
+                "success_rate": 0.5384615384615384,
+                "admissible_rate": 0.875
+              },
+              "pick_cool_then_place_in_recep": {
+                "n": 14,
+                "success_rate": 0.5,
+                "admissible_rate": 0.9458762886597938
+              },
+              "pick_two_obj_and_place": {
+                "n": 14,
+                "success_rate": 0.2857142857142857,
+                "admissible_rate": 0.949671772428884
+              }
+            }
+          },
+          "out": "/home/yiyangba/ssopd_paper_archive/reports/ssopd05_alfworld_b3_late/shared/alpha_p0.0.jsonl",
+          "shared": true
+        },
+        "-1.5": {
+          "metrics": {
+            "n_trajectories": 100,
+            "success_rate": 0.47,
+            "admissible_rate": 0.8944262295081967,
+            "mean_steps": 30.5,
+            "n_tasks": 100,
+            "n_mixed_groups": 0,
+            "mixed_group_rate": 0.0,
+            "mixed_group_rate_ci": [
+              0.0,
+              0.03699480747600191
+            ],
+            "hit_max_steps_rate": 0.0,
+            "admissible_action_rate": 0.8944262295081967,
+            "parse_ok_rate": 0.8944262295081967,
+            "mean_tokens": 3008.63,
+            "by_task_type": {
+              "pick_and_place_simple": {
+                "n": 17,
+                "success_rate": 0.4117647058823529,
+                "admissible_rate": 0.8961937716262975
+              },
+              "pick_heat_then_place_in_recep": {
+                "n": 16,
+                "success_rate": 0.6875,
+                "admissible_rate": 0.8534278959810875
+              },
+              "pick_clean_then_place_in_recep": {
+                "n": 26,
+                "success_rate": 0.4230769230769231,
+                "admissible_rate": 0.8869346733668342
+              },
+              "look_at_obj_in_light": {
+                "n": 13,
+                "success_rate": 0.38461538461538464,
+                "admissible_rate": 0.8886198547215496
+              },
+              "pick_cool_then_place_in_recep": {
+                "n": 14,
+                "success_rate": 0.5,
+                "admissible_rate": 0.9411764705882353
+              },
+              "pick_two_obj_and_place": {
+                "n": 14,
+                "success_rate": 0.42857142857142855,
+                "admissible_rate": 0.9074074074074074
+              }
+            }
+          },
+          "wall_s": 0.0,
+          "out": "/home/yiyangba/ssopd_paper_archive/reports/ssopd05_alfworld_b3_late/v_episode/alpha_m1.5.jsonl"
+        },
+        "-1.0": {
+          "metrics": {
+            "n_trajectories": 100,
+            "success_rate": 0.37,
+            "admissible_rate": 0.9018867924528302,
+            "mean_steps": 31.8,
+            "n_tasks": 100,
+            "n_mixed_groups": 0,
+            "mixed_group_rate": 0.0,
+            "mixed_group_rate_ci": [
+              0.0,
+              0.03699480747600191
+            ],
+            "hit_max_steps_rate": 0.0,
+            "admissible_action_rate": 0.9018867924528302,
+            "parse_ok_rate": 0.9018867924528302,
+            "mean_tokens": 3116.46,
+            "by_task_type": {
+              "pick_and_place_simple": {
+                "n": 17,
+                "success_rate": 0.47058823529411764,
+                "admissible_rate": 0.9222011385199241
+              },
+              "pick_heat_then_place_in_recep": {
+                "n": 16,
+                "success_rate": 0.375,
+                "admissible_rate": 0.8964879852125693
+              },
+              "pick_clean_then_place_in_recep": {
+                "n": 26,
+                "success_rate": 0.2692307692307692,
+                "admissible_rate": 0.9021739130434783
+              },
+              "look_at_obj_in_light": {
+                "n": 13,
+                "success_rate": 0.46153846153846156,
+                "admissible_rate": 0.8981723237597912
+              },
+              "pick_cool_then_place_in_recep": {
+                "n": 14,
+                "success_rate": 0.35714285714285715,
+                "admissible_rate": 0.9078341013824884
+              },
+              "pick_two_obj_and_place": {
+                "n": 14,
+                "success_rate": 0.35714285714285715,
+                "admissible_rate": 0.8822269807280514
+              }
+            }
+          },
+          "wall_s": 0.0,
+          "out": "/home/yiyangba/ssopd_paper_archive/reports/ssopd05_alfworld_b3_late/v_episode/alpha_m1.0.jsonl"
+        }
+      },
+      "best_alpha": -1.5,
+      "best_gain_pp_vs_alpha0": 7.9999999999999964
+    },
+    "v_late": {
+      "grid": {
+        "0.0": {
+          "metrics": {
+            "n_trajectories": 100,
+            "success_rate": 0.39,
+            "admissible_rate": 0.9031219826198905,
+            "mean_steps": 31.07,
+            "n_tasks": 100,
+            "n_mixed_groups": 0,
+            "mixed_group_rate": 0.0,
+            "mixed_group_rate_ci": [
+              0.0,
+              0.03699480747600191
+            ],
+            "hit_max_steps_rate": 0.0,
+            "admissible_action_rate": 0.9031219826198905,
+            "parse_ok_rate": 0.9031219826198905,
+            "mean_tokens": 3156.24,
+            "by_task_type": {
+              "pick_and_place_simple": {
+                "n": 17,
+                "success_rate": 0.17647058823529413,
+                "admissible_rate": 0.8809917355371901
+              },
+              "pick_heat_then_place_in_recep": {
+                "n": 16,
+                "success_rate": 0.5,
+                "admissible_rate": 0.9056603773584906
+              },
+              "pick_clean_then_place_in_recep": {
+                "n": 26,
+                "success_rate": 0.38461538461538464,
+                "admissible_rate": 0.8845177664974619
+              },
+              "look_at_obj_in_light": {
+                "n": 13,
+                "success_rate": 0.5384615384615384,
+                "admissible_rate": 0.875
+              },
+              "pick_cool_then_place_in_recep": {
+                "n": 14,
+                "success_rate": 0.5,
+                "admissible_rate": 0.9458762886597938
+              },
+              "pick_two_obj_and_place": {
+                "n": 14,
+                "success_rate": 0.2857142857142857,
+                "admissible_rate": 0.949671772428884
+              }
+            }
+          },
+          "out": "/home/yiyangba/ssopd_paper_archive/reports/ssopd05_alfworld_b3_late/shared/alpha_p0.0.jsonl",
+          "shared": true
+        },
+        "-1.5": {
+          "metrics": {
+            "n_trajectories": 100,
+            "success_rate": 0.4,
+            "admissible_rate": 0.8959646910466582,
+            "mean_steps": 31.72,
+            "n_tasks": 100,
+            "n_mixed_groups": 0,
+            "mixed_group_rate": 0.0,
+            "mixed_group_rate_ci": [
+              0.0,
+              0.03699480747600191
+            ],
+            "hit_max_steps_rate": 0.0,
+            "admissible_action_rate": 0.8959646910466582,
+            "parse_ok_rate": 0.8959646910466582,
+            "mean_tokens": 2945.55,
+            "by_task_type": {
+              "pick_and_place_simple": {
+                "n": 17,
+                "success_rate": 0.29411764705882354,
+                "admissible_rate": 0.8932203389830509
+              },
+              "pick_heat_then_place_in_recep": {
+                "n": 16,
+                "success_rate": 0.5625,
+                "admissible_rate": 0.9036697247706422
+              },
+              "pick_clean_then_place_in_recep": {
+                "n": 26,
+                "success_rate": 0.38461538461538464,
+                "admissible_rate": 0.8928571428571429
+              },
+              "look_at_obj_in_light": {
+                "n": 13,
+                "success_rate": 0.46153846153846156,
+                "admissible_rate": 0.8658227848101265
+              },
+              "pick_cool_then_place_in_recep": {
+                "n": 14,
+                "success_rate": 0.5,
+                "admissible_rate": 0.9221967963386728
+              },
+              "pick_two_obj_and_place": {
+                "n": 14,
+                "success_rate": 0.21428571428571427,
+                "admissible_rate": 0.898406374501992
+              }
+            }
+          },
+          "wall_s": 556.600713968277,
+          "out": "/home/yiyangba/ssopd_paper_archive/reports/ssopd05_alfworld_b3_late/v_late/alpha_m1.5.jsonl"
+        },
+        "-1.0": {
+          "metrics": {
+            "n_trajectories": 100,
+            "success_rate": 0.33,
+            "admissible_rate": 0.8988412151581585,
+            "mean_steps": 31.93,
+            "n_tasks": 100,
+            "n_mixed_groups": 0,
+            "mixed_group_rate": 0.0,
+            "mixed_group_rate_ci": [
+              0.0,
+              0.03699480747600191
+            ],
+            "hit_max_steps_rate": 0.0,
+            "admissible_action_rate": 0.8988412151581585,
+            "parse_ok_rate": 0.8988412151581585,
+            "mean_tokens": 3168.22,
+            "by_task_type": {
+              "pick_and_place_simple": {
+                "n": 17,
+                "success_rate": 0.4117647058823529,
+                "admissible_rate": 0.9171374764595104
+              },
+              "pick_heat_then_place_in_recep": {
+                "n": 16,
+                "success_rate": 0.3125,
+                "admissible_rate": 0.8865784499054821
+              },
+              "pick_clean_then_place_in_recep": {
+                "n": 26,
+                "success_rate": 0.3076923076923077,
+                "admissible_rate": 0.8947368421052632
+              },
+              "look_at_obj_in_light": {
+                "n": 13,
+                "success_rate": 0.38461538461538464,
+                "admissible_rate": 0.8861788617886179
+              },
+              "pick_cool_then_place_in_recep": {
+                "n": 14,
+                "success_rate": 0.35714285714285715,
+                "admissible_rate": 0.9078341013824884
+              },
+              "pick_two_obj_and_place": {
+                "n": 14,
+                "success_rate": 0.21428571428571427,
+                "admissible_rate": 0.9005847953216374
+              }
+            }
+          },
+          "wall_s": 519.2287979125977,
+          "out": "/home/yiyangba/ssopd_paper_archive/reports/ssopd05_alfworld_b3_late/v_late/alpha_m1.0.jsonl"
+        }
+      },
+      "best_alpha": -1.5,
+      "best_gain_pp_vs_alpha0": 1.0000000000000009
+    }
+  },
+  "analysis": {
+    "inject_style": "decision_point",
+    "episode_ref_alpha": -1.5,
+    "late_best_alpha": -1.5,
+    "gate_vs_episode_m15": {
+      "delta_success_pp": -6.999999999999995,
+      "delta_admissible_pp": 0.15384615384614886,
+      "amplification_ratio": -45.50000000000144,
+      "bootstrap": {
+        "mean": -0.07,
+        "ci_lo": -0.15,
+        "ci_hi": 0.01,
+        "n_tasks": 100
+      },
+      "gate_pass": false
+    },
+    "late_vs_alpha0": {
+      "delta_success_pp": 1.0000000000000009,
+      "delta_admissible_pp": -0.7157291573232305,
+      "amplification_ratio": -1.397176557316626,
+      "bootstrap": {
+        "mean": 0.01,
+        "ci_lo": -0.11,
+        "ci_hi": 0.12,
+        "n_tasks": 100
+      },
+      "gate_pass": false
+    }
+  }
+}

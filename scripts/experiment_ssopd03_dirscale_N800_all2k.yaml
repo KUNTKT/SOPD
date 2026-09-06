@@ -1,0 +1,45 @@
+experiment_id: ssopd03_dirscale_N800_all2k_inject
+code_version: ssopd_math_v0
+dataset_version: math_lighteval_v1
+random_seed: 42
+python: /scratch/ktang115/envs/bootstrap_alignment/bin/python
+model:
+  name: Qwen3-1.7B
+  path: /scratch/ktang115/models/Qwen3-1.7B
+  variant: post-trained
+  revision: local
+  torch_dtype: bfloat16
+  device_map: null
+  device: cuda
+  use_cache: true
+  local_files_only: true
+  temperature: 1.0
+  top_p: 0.95
+  max_new_tokens: 2048
+  do_sample: true
+paths:
+  root: /scratch/ktang115/SSOPD/ssopd_math
+  data: data
+  reports: reports
+  data_dir: data/ssopd03_dirscale_N800_all2k
+  rollouts: data/ssopd01_qwen3_1_7b_scale2k/rollouts.jsonl
+  directions: data/ssopd02_dirscale/N800/directions.npz
+  splits: data/ssopd02_qwen3_1_7b_scale2k/splits.json
+  reports_dir: reports/ssopd03_dirscale_N800_all2k
+  report_md: reports/ssopd03_dirscale_N800_all2k_report.md
+  protocol_log: scale2k_paper_protocol_dirscale_N800_all2k.log
+audit_batch_size: 48
+ssopd03:
+  iterate_note: 'N800 vector_fit direction; inject all 2000 problems @α=2 mt2048'
+  layer_pick: middle
+  layer_index: 14
+  alpha_mode: absolute
+  alpha_grid:
+  - 2.0
+  sweep_alpha: false
+  selection_max_problems: 2000
+  audit_batch_size: 48
+  direction_variant: task_balanced_paired
+  direction_vector: v_cap
+  direction_key: layer_14_task_balanced_paired_v_cap
+  inject_mode: contrastive_cap

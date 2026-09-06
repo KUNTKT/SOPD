@@ -1,0 +1,57 @@
+experiment_id: ssopd05_alfworld_unseen_ablation
+code_version: ssopd05_v0
+dataset_version: alfworld_tw_2.1.1
+random_seed: 1010
+python: /scratch/ktang115/envs/bootstrap_alignment/bin/python
+
+model:
+  name: Qwen3-1.7B
+  path: /scratch/ktang115/models/Qwen3-1.7B
+  torch_dtype: bfloat16
+  device: cuda
+  local_files_only: true
+  use_cache: true
+  enable_thinking: false
+  adapter_path: /home/yiyangba/ssopd_paper_archive/data/ssopd05_alfworld_coldstart/coldstart_lora
+
+env:
+  data_root: /scratch/ktang115/cache/alfworld
+  eval_split: valid_unseen
+  eval_limit: 100
+  task_types: [1, 2, 3, 4, 5, 6]
+
+prompt:
+  few_shot: true
+  history_window: 12
+
+rollout:
+  backend: hf
+  max_steps: 40
+  max_new_tokens: 32
+  temperature: 1.0
+  top_p: 1.0
+  do_sample: true
+  batch_size: 8
+  seed: 2020
+  env_workers: 4
+
+steering:
+  layer: 14
+  direction_key: layer_14_task_balanced_paired_v_cap
+  directions: /home/yiyangba/ssopd_paper_archive/data/ssopd05_alfworld/directions.npz
+  directions_r1a: /home/yiyangba/ssopd_paper_archive/data/ssopd05_alfworld/directions_r1a_step_admissible.npz
+  alpha_grid: [-1.5, -1.0, 0.0, 1.0, 1.5]
+  r0_styles:
+    R0a: decision_point
+    R0b: prefill_decode
+    R0c: decode_only
+    R0d: generation_wide
+    R0e: action_boundary
+  gate_min_delta_pp: 3.0
+  cast_lite_alpha: -1.5
+
+paths:
+  archive: /home/yiyangba/ssopd_paper_archive
+  reports_dir: /home/yiyangba/ssopd_paper_archive/reports/ssopd05_alfworld_unseen_ablation
+  rollouts_select: /home/yiyangba/ssopd_paper_archive/data/ssopd05_alfworld_select_rollouts/rollouts.jsonl
+  directions: /home/yiyangba/ssopd_paper_archive/data/ssopd05_alfworld/directions.npz

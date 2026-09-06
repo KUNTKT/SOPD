@@ -1,0 +1,14 @@
+{
+  "n_inter": 185,
+  "n_intra": 815,
+  "n_total": 1000,
+  "n_tasks": 307,
+  "layers": [
+    17,
+    18,
+    19
+  ],
+  "model": "Qwen3-8B",
+  "wall_s": 375.80483984947205,
+  "memory": "/home/yiyangba/ssopd_paper_archive/data/ssopd05_agent_ssopd/npm_faithful_8b.npz"
+}

@@ -1,0 +1,14 @@
+{
+  "n_inter": 185,
+  "n_intra": 2699,
+  "n_total": 2884,
+  "layer": 14,
+  "probe": {
+    "train_acc": 0.95575,
+    "n": 4000,
+    "pos_rate": 0.09275,
+    "intercept": 0.0037384771172071477
+  },
+  "wall_s": 446.8185601234436,
+  "memory_npz": "/home/yiyangba/ssopd_paper_archive/data/ssopd05_agent_ssopd/npm_memory.npz"
+}

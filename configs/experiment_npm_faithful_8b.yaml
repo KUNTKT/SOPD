@@ -1,0 +1,50 @@
+experiment_id: npm_faithful_8b
+code_version: agent_ssopd_v0
+dataset_version: alfworld_tw_2.1.1
+random_seed: 1010
+python: /scratch/ktang115/envs/bootstrap_alignment/bin/python
+
+model:
+  name: Qwen3-8B
+  path: /scratch/ktang115/models/Qwen3-8B
+  torch_dtype: bfloat16
+  device: cuda
+  local_files_only: true
+  use_cache: true
+  enable_thinking: false
+
+env:
+  data_root: /scratch/ktang115/cache/alfworld
+  eval_split: valid_unseen
+  eval_limit: 100
+  task_types: [1, 2, 3, 4, 5, 6]
+
+prompt:
+  few_shot: true
+  history_window: 12
+
+rollout:
+  backend: hf
+  max_steps: 40
+  max_new_tokens: 32
+  temperature: 1.0
+  top_p: 1.0
+  do_sample: true
+  batch_size: 1
+  seed: 2020
+  env_workers: 1
+
+steering:
+  layers: [17, 18, 19]
+  inject_style: prefill_decode
+  top_k: 8
+  alpha_candidates: [0.5, 1.0, 1.5]
+  kl_eps: 0.2
+  gate_min_delta_pp: 5.0
+
+paths:
+  archive: /home/yiyangba/ssopd_paper_archive
+  reports_dir: /home/yiyangba/ssopd_paper_archive/reports/npm_faithful_8b
+  rollouts_select: /home/yiyangba/ssopd_paper_archive/data/ssopd05_alfworld_select_rollouts/rollouts.jsonl
+  faithful_memory: /home/yiyangba/ssopd_paper_archive/data/ssopd05_agent_ssopd/npm_faithful_8b.npz
+  uce_library_evolved: /home/yiyangba/ssopd_paper_archive/data/ssopd05_agent_ssopd/uce_library_evolved.json

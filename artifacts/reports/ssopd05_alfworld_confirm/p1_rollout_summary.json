@@ -1,0 +1,73 @@
+{
+  "stage": "P1_rollouts",
+  "metrics": {
+    "n_trajectories": 1432,
+    "success_rate": 0.3973463687150838,
+    "admissible_rate": 0.8961798276263685,
+    "mean_steps": 29.97905027932961,
+    "n_tasks": 358,
+    "n_mixed_groups": 187,
+    "mixed_group_rate": 0.5223463687150838,
+    "mixed_group_rate_ci": [
+      0.47064112445771833,
+      0.5735771191052109
+    ],
+    "hit_max_steps_rate": 0.0,
+    "admissible_action_rate": 0.8961798276263685,
+    "parse_ok_rate": 0.8961798276263685,
+    "mean_tokens": 307.8673184357542,
+    "by_task_type": {
+      "pick_two_obj_and_place": {
+        "n": 324,
+        "success_rate": 0.23765432098765432,
+        "admissible_rate": 0.8973607038123167
+      },
+      "pick_and_place_simple": {
+        "n": 340,
+        "success_rate": 0.6176470588235294,
+        "admissible_rate": 0.9113090154934732
+      },
+      "look_at_obj_in_light": {
+        "n": 120,
+        "success_rate": 0.5916666666666667,
+        "admissible_rate": 0.908348134991119
+      },
+      "pick_clean_then_place_in_recep": {
+        "n": 272,
+        "success_rate": 0.375,
+        "admissible_rate": 0.8928528383753164
+      },
+      "pick_cool_then_place_in_recep": {
+        "n": 220,
+        "success_rate": 0.2727272727272727,
+        "admissible_rate": 0.8889498970487303
+      },
+      "pick_heat_then_place_in_recep": {
+        "n": 156,
+        "success_rate": 0.3141025641025641,
+        "admissible_rate": 0.8782215227228015
+      }
+    }
+  },
+  "n_mixed_groups": 187,
+  "n_paired_tasks": 187,
+  "wall_s": 4391.0910115242,
+  "out": "/home/yiyangba/ssopd_paper_archive/data/ssopd05_alfworld_select_rollouts/rollouts.jsonl",
+  "partition_meta": {
+    "data_root": "/scratch/ktang115/cache/alfworld",
+    "limit": 1200,
+    "split": "train",
+    "partition_seed": 1010,
+    "fractions": {
+      "sft": 0.4,
+      "audit_select": 0.3,
+      "audit_confirm": 0.3
+    },
+    "fingerprint": "f16fd142130823c68d7c53c61b295775ecc9993bf99c119af4e32dfae98f941a",
+    "pool_sizes": {
+      "sft": 484,
+      "audit_select": 358,
+      "audit_confirm": 358
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "n_problems": 1200,
+  "n_paired": 331,
+  "pos_only": 621,
+  "neg_only": 248,
+  "n_traj": 4800,
+  "success_rate": 0.6685416666666667,
+  "n_paired_used": 331,
+  "fallback_count": 94,
+  "v_cap_norm": 12.749100685119629,
+  "cosine_to_thinking_on": 0.6784679143616669,
+  "direction_key": "layer_14_task_balanced_paired_v_cap",
+  "layer": 14,
+  "enable_thinking": false,
+  "extract_wall_s": 58.011154651641846
+}

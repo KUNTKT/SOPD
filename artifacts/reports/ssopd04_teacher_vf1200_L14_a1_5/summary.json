@@ -1,0 +1,9 @@
+{
+  "n": 1200,
+  "accuracy": 0.6191666666666666,
+  "parse_rate": 0.9991666666666666,
+  "hit_max_frac": 0.41333333333333333,
+  "mean_length": 1508.2558333333334,
+  "wall_s": 4619.927845954895,
+  "traj_path": "/tmp/ssopd04_teacher_vf1200_L14_a1_5/teacher_trajectories.jsonl"
+}

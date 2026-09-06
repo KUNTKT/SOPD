@@ -1,0 +1,93 @@
+{
+  "n_states": 3067,
+  "n_tasks": 100,
+  "mean_js": 0.005494420486845864,
+  "median_js": 0.003259397577494383,
+  "whole_action_top1_diff": 0.22041082491033584,
+  "first_cmd_token_top1_diff": 0.11640039126181936,
+  "first_word_top1_diff": 0.08901206390609716,
+  "token_same_action_diff": 0.163025758069775,
+  "mean_rank_change": 0.1903867818250094,
+  "median_rank_change": 0.0,
+  "reach_frac": {
+    "0.02": 0.9977176393870232,
+    "0.05": 0.9364199543527877
+  },
+  "median_kmax": 0.2106965184211731,
+  "early_step_0_2": {
+    "n": 300,
+    "top1_diff": 0.28,
+    "median_js": 0.00366896262858063,
+    "mean_js": 0.006143827420310118,
+    "token_top1_diff": 0.02,
+    "token_same_action_diff": 0.26666666666666666
+  },
+  "later_steps": {
+    "n": 2767,
+    "top1_diff": 0.21395012649078424,
+    "median_js": 0.0032124933786690235,
+    "mean_js": 0.005424011350583025,
+    "token_top1_diff": 0.1268521864835562,
+    "token_same_action_diff": 0.15178894109143476
+  },
+  "by_task_type": {
+    "look_at_obj_in_light": {
+      "n": 389,
+      "top1_diff": 0.23393316195372751,
+      "median_js": 0.0036383518017828465,
+      "mean_js": 0.005385626055232002,
+      "token_top1_diff": 0.17223650385604114,
+      "token_same_action_diff": 0.15167095115681234
+    },
+    "pick_and_place_simple": {
+      "n": 501,
+      "top1_diff": 0.23952095808383234,
+      "median_js": 0.0025725706946104765,
+      "mean_js": 0.004466495936631435,
+      "token_top1_diff": 0.12974051896207583,
+      "token_same_action_diff": 0.17964071856287425
+    },
+    "pick_clean_then_place_in_recep": {
+      "n": 842,
+      "top1_diff": 0.19002375296912113,
+      "median_js": 0.0030947939958423376,
+      "mean_js": 0.0052960856397074344,
+      "token_top1_diff": 0.08788598574821853,
+      "token_same_action_diff": 0.14608076009501186
+    },
+    "pick_cool_then_place_in_recep": {
+      "n": 379,
+      "top1_diff": 0.2532981530343008,
+      "median_js": 0.0032905410043895245,
+      "mean_js": 0.006487886513378176,
+      "token_top1_diff": 0.11081794195250659,
+      "token_same_action_diff": 0.19261213720316622
+    },
+    "pick_heat_then_place_in_recep": {
+      "n": 478,
+      "top1_diff": 0.2510460251046025,
+      "median_js": 0.0043175434693694115,
+      "mean_js": 0.0064502725334814656,
+      "token_top1_diff": 0.1297071129707113,
+      "token_same_action_diff": 0.1799163179916318
+    },
+    "pick_two_obj_and_place": {
+      "n": 478,
+      "top1_diff": 0.18619246861924685,
+      "median_js": 0.0030799469677731395,
+      "mean_js": 0.005266153274499032,
+      "token_top1_diff": 0.09832635983263599,
+      "token_same_action_diff": 0.14435146443514643
+    }
+  },
+  "gate": {
+    "top1_threshold": 0.1,
+    "median_js_threshold": 0.01,
+    "top1_pass": true,
+    "js_pass": false,
+    "signal_pass": false
+  },
+  "verdict": "FAIL",
+  "source": "/home/yiyangba/ssopd_paper_archive/reports/uce_counterfactual_logit/H4_control.jsonl",
+  "n_source_trajectories": 100
+}

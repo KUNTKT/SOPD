@@ -1,0 +1,109 @@
+{
+  "task_meta": {
+    "data_root": "/scratch/ktang115/cache/alfworld",
+    "split": "valid_unseen",
+    "limit": 100,
+    "n_tasks": 100,
+    "fingerprint": "63d833625fd097c4221f3ddbf2619cde465bd23961c47dbf4665aeb3eab42bdd"
+  },
+  "conditions": {
+    "H0": {
+      "metrics": {
+        "n_trajectories": 100,
+        "success_rate": 0.29,
+        "admissible_rate": 0.8885186307179642,
+        "mean_steps": 33.01,
+        "n_tasks": 100,
+        "n_mixed_groups": 0,
+        "mixed_group_rate": 0.0,
+        "mixed_group_rate_ci": [
+          0.0,
+          0.03699480747600191
+        ],
+        "hit_max_steps_rate": 0.0,
+        "admissible_action_rate": 0.8885186307179642,
+        "parse_ok_rate": 0.8885186307179642,
+        "mean_tokens": 333.99
+      },
+      "out": "/home/yiyangba/ssopd_paper_archive/reports/uce_alfworld/H0_base.jsonl",
+      "gain_pp": 0.0
+    },
+    "B_ret": {
+      "metrics": {
+        "n_trajectories": 100,
+        "success_rate": 0.36,
+        "admissible_rate": 0.9180782260548198,
+        "mean_steps": 32.47,
+        "n_tasks": 100,
+        "n_mixed_groups": 0,
+        "mixed_group_rate": 0.0,
+        "mixed_group_rate_ci": [
+          0.0,
+          0.03699480747600191
+        ],
+        "hit_max_steps_rate": 0.0,
+        "admissible_action_rate": 0.9180782260548198,
+        "parse_ok_rate": 0.9180782260548198,
+        "mean_tokens": 325.9
+      },
+      "wall_s": 1669.311544418335,
+      "out": "/home/yiyangba/ssopd_paper_archive/reports/uce_alfworld/B_ret.jsonl",
+      "n_retrieve_hits": 100,
+      "mean_retrieve_score": 0.31141207403707405,
+      "gain_pp": 7.000000000000001
+    },
+    "B_uce": {
+      "metrics": {
+        "n_trajectories": 100,
+        "success_rate": 0.4,
+        "admissible_rate": 0.9096958174904943,
+        "mean_steps": 31.56,
+        "n_tasks": 100,
+        "n_mixed_groups": 0,
+        "mixed_group_rate": 0.0,
+        "mixed_group_rate_ci": [
+          0.0,
+          0.03699480747600191
+        ],
+        "hit_max_steps_rate": 0.0,
+        "admissible_action_rate": 0.9096958174904943,
+        "parse_ok_rate": 0.9096958174904943,
+        "mean_tokens": 315.74
+      },
+      "wall_s": 1588.4481949806213,
+      "out": "/home/yiyangba/ssopd_paper_archive/reports/uce_alfworld/B_uce.jsonl",
+      "n_retrieve_hits": 100,
+      "mean_retrieve_score": 0.33043140193140197,
+      "gain_pp": 11.000000000000004,
+      "evolve": {
+        "n": 80,
+        "n_success": 33,
+        "n_fail": 47,
+        "n_added": 33,
+        "n_pruned": 41,
+        "resumed": false,
+        "out": "/home/yiyangba/ssopd_paper_archive/reports/uce_alfworld/B_uce_evolve.jsonl",
+        "n_entries_after": 561
+      }
+    }
+  },
+  "analysis": {
+    "best_key": "B_uce",
+    "delta_success_pp": 11.000000000000004,
+    "bootstrap_vs_H0": {
+      "mean": 0.11,
+      "ci_lo": 0.01,
+      "ci_hi": 0.22,
+      "n_tasks": 100
+    },
+    "gate_pass": true,
+    "min_delta_pp": 5.0,
+    "distill": "skip_unless_gate",
+    "bootstrap_B_ret_vs_H0": {
+      "mean": 0.07,
+      "ci_lo": -0.04,
+      "ci_hi": 0.19,
+      "n_tasks": 100
+    }
+  }
+}

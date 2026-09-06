@@ -1,0 +1,14 @@
+{
+  "n_success_scanned": 569,
+  "n_entries": 569,
+  "n_skip_empty": 0,
+  "by_task_type": {
+    "pick_two_obj_and_place": 77,
+    "pick_and_place_simple": 210,
+    "look_at_obj_in_light": 71,
+    "pick_clean_then_place_in_recep": 102,
+    "pick_cool_then_place_in_recep": 60,
+    "pick_heat_then_place_in_recep": 49
+  },
+  "library": "/home/yiyangba/ssopd_paper_archive/data/ssopd05_agent_ssopd/uce_library.json"
+}

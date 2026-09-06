@@ -1,0 +1,159 @@
+{
+  "results": {
+    "H0": {
+      "success_rate": 0.29,
+      "metrics": {
+        "n_trajectories": 100,
+        "success_rate": 0.29,
+        "admissible_rate": 0.8885186307179642,
+        "mean_steps": 33.01,
+        "n_tasks": 100,
+        "n_mixed_groups": 0,
+        "mixed_group_rate": 0.0,
+        "mixed_group_rate_ci": [
+          0.0,
+          0.03699480747600191
+        ],
+        "hit_max_steps_rate": 0.0,
+        "admissible_action_rate": 0.8885186307179642,
+        "parse_ok_rate": 0.8885186307179642,
+        "mean_tokens": 333.99
+      }
+    },
+    "B_uce": {
+      "success_rate": 0.4,
+      "metrics": {
+        "n_trajectories": 100,
+        "success_rate": 0.4,
+        "admissible_rate": 0.9096958174904943,
+        "mean_steps": 31.56,
+        "n_tasks": 100,
+        "n_mixed_groups": 0,
+        "mixed_group_rate": 0.0,
+        "mixed_group_rate_ci": [
+          0.0,
+          0.03699480747600191
+        ],
+        "hit_max_steps_rate": 0.0,
+        "admissible_action_rate": 0.9096958174904943,
+        "parse_ok_rate": 0.9096958174904943,
+        "mean_tokens": 315.74
+      }
+    },
+    "uce_opd": {
+      "success_rate": 0.34,
+      "metrics": {
+        "n_trajectories": 100,
+        "success_rate": 0.34,
+        "admissible_rate": 0.9343740044600192,
+        "mean_steps": 31.39,
+        "n_tasks": 100,
+        "n_mixed_groups": 0,
+        "mixed_group_rate": 0.0,
+        "mixed_group_rate_ci": [
+          0.0,
+          0.03699480747600191
+        ],
+        "hit_max_steps_rate": 0.0,
+        "admissible_action_rate": 0.9343740044600192,
+        "parse_ok_rate": 0.9343740044600192,
+        "mean_tokens": 312.64
+      }
+    },
+    "vanilla_sft": {
+      "success_rate": 0.5,
+      "metrics": {
+        "n_trajectories": 100,
+        "success_rate": 0.5,
+        "admissible_rate": 0.974124809741248,
+        "mean_steps": 26.28,
+        "n_tasks": 100,
+        "n_mixed_groups": 0,
+        "mixed_group_rate": 0.0,
+        "mixed_group_rate_ci": [
+          0.0,
+          0.03699480747600191
+        ],
+        "hit_max_steps_rate": 0.0,
+        "admissible_action_rate": 0.974124809741248,
+        "parse_ok_rate": 0.974124809741248,
+        "mean_tokens": 263.76
+      }
+    },
+    "no_pi_opd": {
+      "success_rate": 0.28,
+      "metrics": {
+        "n_trajectories": 100,
+        "success_rate": 0.28,
+        "admissible_rate": 0.8868994330050731,
+        "mean_steps": 33.51,
+        "n_tasks": 100,
+        "n_mixed_groups": 0,
+        "mixed_group_rate": 0.0,
+        "mixed_group_rate_ci": [
+          0.0,
+          0.03699480747600191
+        ],
+        "hit_max_steps_rate": 0.0,
+        "admissible_action_rate": 0.8868994330050731,
+        "parse_ok_rate": 0.8868994330050731,
+        "mean_tokens": 339.17
+      }
+    },
+    "uce_sft": {
+      "success_rate": 0.37,
+      "metrics": {
+        "n_trajectories": 100,
+        "success_rate": 0.37,
+        "admissible_rate": 0.9490121096239643,
+        "mean_steps": 31.38,
+        "n_tasks": 100,
+        "n_mixed_groups": 0,
+        "mixed_group_rate": 0.0,
+        "mixed_group_rate_ci": [
+          0.0,
+          0.03699480747600191
+        ],
+        "hit_max_steps_rate": 0.0,
+        "admissible_action_rate": 0.9490121096239643,
+        "parse_ok_rate": 0.9490121096239643,
+        "mean_tokens": 315.39
+      }
+    }
+  },
+  "gate": {
+    "delta_h0_pp": 5.000000000000004,
+    "delta_vanilla_pp": -15.999999999999998,
+    "delta_no_pi_pp": 6.0,
+    "delta_sft_pp": -2.9999999999999973,
+    "R_int": 0.45454545454545475,
+    "bootstrap": {
+      "vs_h0": {
+        "mean": 0.05,
+        "ci_lo": -0.03,
+        "ci_hi": 0.13,
+        "n_tasks": 100
+      },
+      "vs_vanilla": {
+        "mean": -0.16,
+        "ci_lo": -0.27,
+        "ci_hi": -0.05,
+        "n_tasks": 100
+      },
+      "vs_no_pi": {
+        "mean": 0.06,
+        "ci_lo": -0.03,
+        "ci_hi": 0.15,
+        "n_tasks": 100
+      },
+      "vs_uce_sft": {
+        "mean": -0.03,
+        "ci_lo": -0.13,
+        "ci_hi": 0.07,
+        "n_tasks": 100
+      }
+    },
+    "min_delta_pp": 2.0,
+    "gate_pass": false
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "task_meta": {
+    "data_root": "/scratch/ktang115/cache/alfworld",
+    "split": "valid_unseen",
+    "limit": 100,
+    "n_tasks": 100,
+    "fingerprint": "63d833625fd097c4221f3ddbf2619cde465bd23961c47dbf4665aeb3eab42bdd"
+  },
+  "conditions": {
+    "H0": {
+      "metrics": {
+        "n_trajectories": 100,
+        "success_rate": 0.29,
+        "admissible_rate": 0.8885186307179642,
+        "mean_steps": 33.01,
+        "n_tasks": 100,
+        "n_mixed_groups": 0,
+        "mixed_group_rate": 0.0,
+        "mixed_group_rate_ci": [
+          0.0,
+          0.03699480747600191
+        ],
+        "hit_max_steps_rate": 0.0,
+        "admissible_action_rate": 0.8885186307179642,
+        "parse_ok_rate": 0.8885186307179642,
+        "mean_tokens": 333.99
+      },
+      "gain_vs_h0_pp": 0.0
+    },
+    "B_uce": {
+      "metrics": {
+        "n_trajectories": 100,
+        "success_rate": 0.4,
+        "admissible_rate": 0.9096958174904943,
+        "mean_steps": 31.56,
+        "n_tasks": 100,
+        "n_mixed_groups": 0,
+        "mixed_group_rate": 0.0,
+        "mixed_group_rate_ci": [
+          0.0,
+          0.03699480747600191
+        ],
+        "hit_max_steps_rate": 0.0,
+        "admissible_action_rate": 0.9096958174904943,
+        "parse_ok_rate": 0.9096958174904943,
+        "mean_tokens": 315.74
+      },
+      "gain_vs_h0_pp": 11.000000000000004
+    },
+    "N1": {
+      "metrics": {
+        "n_trajectories": 100,
+        "success_rate": 0.31,
+        "admissible_rate": 0.8975609756097561,
+        "mean_steps": 32.8,
+        "n_tasks": 100,
+        "n_mixed_groups": 0,
+        "mixed_group_rate": 0.0,
+        "mixed_group_rate_ci": [
+          0.0,
+          0.03699480747600191
+        ],
+        "hit_max_steps_rate": 0.0,
+        "admissible_action_rate": 0.8975609756097561,
+        "parse_ok_rate": 0.8975609756097561,
+        "mean_tokens": 331.43
+      },
+      "wall_s": 1868.0791900157928,
+      "gain_vs_h0_pp": 2.0000000000000018,
+      "mean_alpha": 1.5
+    },
+    "N2": {
+      "metrics": {
+        "n_trajectories": 100,
+        "success_rate": 0.35,
+        "admissible_rate": 0.9065304859176726,
+        "mean_steps": 32.31,
+        "n_tasks": 100,
+        "n_mixed_groups": 0,
+        "mixed_group_rate": 0.0,
+        "mixed_group_rate_ci": [
+          0.0,
+          0.03699480747600191
+        ],
+        "hit_max_steps_rate": 0.0,
+        "admissible_action_rate": 0.9065304859176726,
+        "parse_ok_rate": 0.9065304859176726,
+        "mean_tokens": 323.43
+      },
+      "wall_s": 1720.1542687416077,
+      "gain_vs_h0_pp": 6.0,
+      "gain_vs_uce_pp": -5.000000000000004,
+      "mean_alpha": 1.5
+    }
+  },
+  "analysis": {
+    "n1_vs_h0_pp": 2.0000000000000018,
+    "n2_vs_uce_pp": -5.000000000000004,
+    "bootstrap_n1_vs_h0": {
+      "mean": 0.02,
+      "ci_lo": -0.03,
+      "ci_hi": 0.08,
+      "n_tasks": 100
+    },
+    "bootstrap_n2_vs_uce": {
+      "mean": -0.05,
+      "ci_lo": -0.11,
+      "ci_hi": 0.01,
+      "n_tasks": 100
+    },
+    "n1_pass": false,
+    "n2_pass": false,
+    "gate_pass": false,
+    "min_delta_pp": 5.0,
+    "distill": "only_if_gate_and_teacher_has_npm"
+  }
+}

@@ -1,0 +1,99 @@
+experiment_id: tame_opd_t0
+code_version: tame_opd_t0_v1
+dataset_version: alfworld_tw_2.1.1
+random_seed: 1010
+manifest_seed: 3030
+python: /scratch/ktang115/envs/bootstrap_alignment/bin/python
+
+model:
+  name: Qwen3-1.7B
+  path: /scratch/ktang115/models/Qwen3-1.7B
+  torch_dtype: bfloat16
+  device: cuda
+  local_files_only: true
+  use_cache: true
+  enable_thinking: false
+  adapter_path: /home/yiyangba/ssopd_paper_archive/data/ssopd05_alfworld_coldstart/coldstart_lora
+
+env:
+  data_root: /scratch/ktang115/cache/alfworld
+  task_types: [1, 2, 3, 4, 5, 6]
+  evolve_n: 80
+  train_limit: 1200
+  inner_train_n: 80
+  meta_select_n: 60
+  probe_confirm_n: 100
+
+prompt:
+  few_shot: true
+  history_window: 12
+
+rollout:
+  backend: hf
+  max_steps: 40
+  max_new_tokens: 32
+  temperature: 1.0
+  top_p: 1.0
+  do_sample: true
+  batch_size: 1
+  seed: 2020
+  env_workers: 1
+
+steering:
+  layer: 14
+  inject_style: none
+
+run_seeds: [2020, 2021, 2022]
+library_seeds:
+  M1: 11
+  M2: 12
+  M3: 13
+  M4: 14
+
+editor:
+  temperature: 0.7
+  max_new_tokens: 256
+  enable_thinking: false
+
+probe:
+  optimizer_steps: 64
+  max_supervised_tokens_per_seed: 4096
+  lora_r: 16
+  lora_alpha: 32
+  lora_dropout: 0.05
+  learning_rate: 1.0e-4
+  teacher_temperature: 1.0
+  student_temperature: 1.0
+  gradient_clip: 1.0
+  max_length: 3072
+
+distill:
+  lora_r: 16
+  lora_alpha: 32
+  lora_dropout: 0.05
+  learning_rate: 1.0e-4
+  teacher_temperature: 1.0
+  student_temperature: 1.0
+  gradient_clip: 1.0
+  max_length: 3072
+
+gate:
+  n_boot: 10000
+  bootstrap_seed: 0
+  min_delta_m0_pp: 3.0
+  teacher_slack_pp: 2.0
+  fallback_rate_max: 0.05
+  min_positive_seeds: 2
+  sample_audit_n: 30
+
+forbidden_splits: [valid_unseen]
+
+paths:
+  archive: /home/yiyangba/ssopd_paper_archive
+  reports_dir: /home/yiyangba/ssopd_paper_archive/reports/tame_opd
+  adapters_dir: /home/yiyangba/ssopd_paper_archive/data/tame_opd/adapters
+  candidates_dir: /home/yiyangba/ssopd_paper_archive/data/tame_opd/candidates
+  uce_library_evolved: /home/yiyangba/ssopd_paper_archive/data/ssopd05_agent_ssopd/uce_library_evolved.json
+  evolve_jsonl: /home/yiyangba/ssopd_paper_archive/reports/uce_alfworld/B_uce_evolve.jsonl
+  b_uce: /home/yiyangba/ssopd_paper_archive/reports/uce_alfworld/B_uce.jsonl
+  coldstart_adapter: /home/yiyangba/ssopd_paper_archive/data/ssopd05_alfworld_coldstart/coldstart_lora

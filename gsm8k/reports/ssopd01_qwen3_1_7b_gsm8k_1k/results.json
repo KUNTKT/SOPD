@@ -1,0 +1,39 @@
+{
+  "stats": {
+    "n_records": 8000,
+    "n_problems": 1000,
+    "parse_rate": 0.999,
+    "success_rate": 0.856875,
+    "mixed_problems": 172,
+    "success_only": 757,
+    "fail_only": 71,
+    "parse_fail_only": 0,
+    "mean_tokens": 963.39175,
+    "schema_ok": true,
+    "n_expected": 8000,
+    "complete": 1.0
+  },
+  "status": "PASS",
+  "fail_reasons": [],
+  "metadata": {
+    "model_name": "Qwen3-1.7B",
+    "model_path": "/scratch/ktang115/models/Qwen3-1.7B",
+    "model_variant": "post-trained",
+    "model_revision": "local",
+    "dataset_version": "gsm8k_v1",
+    "random_seed": 42,
+    "code_version": "ssopd_math_v0",
+    "timestamp": "2026-08-29T12:22:14-0700",
+    "python_version": "3.11.15 | packaged by conda-forge | (main, Mar  5 2026, 16:45:40) [GCC 14.3.0]",
+    "platform": "Linux-4.18.0-553.124.1.el8_10.x86_64-x86_64-with-glibc2.28",
+    "file_fingerprint": {
+      "run_gsm8k_rollouts.py": "ec1d770daa5b219c3e7e252e6e0bc0071c56f0b713dc0e1ec4f1cfa3557e797e"
+    },
+    "pytorch_version": "2.6.0+cu124",
+    "cuda_available": true,
+    "gpu_name": "NVIDIA A100-SXM4-80GB",
+    "transformers_version": "4.57.6"
+  },
+  "wall_clock_s": 23051.35384941101,
+  "note": "HF generate_batch seed= kwarg fix"
+}

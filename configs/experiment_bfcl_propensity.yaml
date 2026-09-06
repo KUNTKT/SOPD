@@ -1,0 +1,36 @@
+experiment_id: bfcl_propensity
+code_version: agent_ssopd_v0
+dataset_version: bfcl_v3_adapted_v1
+random_seed: 2026
+python: /scratch/ktang115/envs/bootstrap_alignment/bin/python
+
+model:
+  name: Qwen3-1.7B
+  path: /scratch/ktang115/models/Qwen3-1.7B
+  torch_dtype: bfloat16
+  device: cuda
+  local_files_only: true
+  use_cache: true
+  enable_thinking: false
+
+bfcl:
+  root: /scratch/ktang115/SSOPD/ssopd_logits/data/bfcl/hf_raw
+  split_seed: 2026
+  n_select_per_cat: 40
+  n_eval_per_cat: 40
+  parse_ok_min: 0.25
+  layer: 14
+  alphas: [-1.5, -1.0, 0.0, 1.0, 1.5]
+  gate_min_delta_f1: 0.10
+
+rollout:
+  max_new_tokens: 256
+  temperature: 1.0
+  top_p: 1.0
+  do_sample: false
+  seed: 2026
+
+paths:
+  archive: /home/yiyangba/ssopd_paper_archive
+  data_dir: /home/yiyangba/ssopd_paper_archive/data/bfcl_propensity
+  reports_dir: /home/yiyangba/ssopd_paper_archive/reports/bfcl_propensity

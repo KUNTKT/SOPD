@@ -1,0 +1,10 @@
+{
+  "n": 1200,
+  "accuracy": 0.38,
+  "n_correct": 456,
+  "parse_rate": 0.9975,
+  "hit_max_frac": 0.7441666666666666,
+  "mean_length": 1917.4933333333333,
+  "wall_s": 9439.816707611084,
+  "traj_path": "/home/yiyangba/ssopd_paper_archive/reports/ssopd04_teacher_qwen3_8b_vf1200/teacher_trajectories.jsonl"
+}

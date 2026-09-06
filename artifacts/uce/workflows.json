@@ -1,0 +1,126 @@
+{
+  "n_success_used": 569,
+  "source": "/home/yiyangba/ssopd_paper_archive/data/ssopd05_alfworld_select_rollouts/rollouts.jsonl",
+  "workflows": {
+    "look_at_obj_in_light": {
+      "n_success": 71,
+      "majority_verbs": [
+        "go to",
+        "take",
+        "go to",
+        "examine",
+        "go to",
+        "use"
+      ],
+      "lines": [
+        "go to the next relevant receptacle",
+        "take the target object from the current receptacle",
+        "go to the next relevant receptacle",
+        "examine the object only if needed",
+        "go to the next relevant receptacle",
+        "use the lamp or appliance required by the task"
+      ],
+      "text": "Suggested workflow (adapt names to the current admissible list):\n1. go to the next relevant receptacle\n2. take the target object from the current receptacle\n3. go to the next relevant receptacle\n4. examine the object only if needed\n5. go to the next relevant receptacle\n6. use the lamp or appliance required by the task"
+    },
+    "pick_and_place_simple": {
+      "n_success": 210,
+      "majority_verbs": [
+        "go to",
+        "take",
+        "go to",
+        "move",
+        "go to",
+        "take"
+      ],
+      "lines": [
+        "go to the next relevant receptacle",
+        "take the target object from the current receptacle",
+        "go to the next relevant receptacle",
+        "move the object to the destination",
+        "go to the next relevant receptacle",
+        "take the target object from the current receptacle"
+      ],
+      "text": "Suggested workflow (adapt names to the current admissible list):\n1. go to the next relevant receptacle\n2. take the target object from the current receptacle\n3. go to the next relevant receptacle\n4. move the object to the destination\n5. go to the next relevant receptacle\n6. take the target object from the current receptacle"
+    },
+    "pick_clean_then_place_in_recep": {
+      "n_success": 102,
+      "majority_verbs": [
+        "go to",
+        "take",
+        "go to",
+        "clean",
+        "go to",
+        "move"
+      ],
+      "lines": [
+        "go to the next relevant receptacle",
+        "take the target object from the current receptacle",
+        "go to the next relevant receptacle",
+        "clean the object with a sinkbasin",
+        "go to the next relevant receptacle",
+        "move the object to the destination"
+      ],
+      "text": "Suggested workflow (adapt names to the current admissible list):\n1. go to the next relevant receptacle\n2. take the target object from the current receptacle\n3. go to the next relevant receptacle\n4. clean the object with a sinkbasin\n5. go to the next relevant receptacle\n6. move the object to the destination"
+    },
+    "pick_cool_then_place_in_recep": {
+      "n_success": 60,
+      "majority_verbs": [
+        "go to",
+        "take",
+        "go to",
+        "cool",
+        "go to",
+        "move"
+      ],
+      "lines": [
+        "go to the next relevant receptacle",
+        "take the target object from the current receptacle",
+        "go to the next relevant receptacle",
+        "cool the object with a fridge",
+        "go to the next relevant receptacle",
+        "move the object to the destination"
+      ],
+      "text": "Suggested workflow (adapt names to the current admissible list):\n1. go to the next relevant receptacle\n2. take the target object from the current receptacle\n3. go to the next relevant receptacle\n4. cool the object with a fridge\n5. go to the next relevant receptacle\n6. move the object to the destination"
+    },
+    "pick_heat_then_place_in_recep": {
+      "n_success": 49,
+      "majority_verbs": [
+        "go to",
+        "take",
+        "go to",
+        "heat",
+        "go to",
+        "move"
+      ],
+      "lines": [
+        "go to the next relevant receptacle",
+        "take the target object from the current receptacle",
+        "go to the next relevant receptacle",
+        "heat the object with a microwave",
+        "go to the next relevant receptacle",
+        "move the object to the destination"
+      ],
+      "text": "Suggested workflow (adapt names to the current admissible list):\n1. go to the next relevant receptacle\n2. take the target object from the current receptacle\n3. go to the next relevant receptacle\n4. heat the object with a microwave\n5. go to the next relevant receptacle\n6. move the object to the destination"
+    },
+    "pick_two_obj_and_place": {
+      "n_success": 77,
+      "majority_verbs": [
+        "go to",
+        "take",
+        "go to",
+        "move",
+        "go to",
+        "take"
+      ],
+      "lines": [
+        "go to the next relevant receptacle",
+        "take the target object from the current receptacle",
+        "go to the next relevant receptacle",
+        "move the object to the destination",
+        "go to the next relevant receptacle",
+        "take the target object from the current receptacle"
+      ],
+      "text": "Suggested workflow (adapt names to the current admissible list):\n1. go to the next relevant receptacle\n2. take the target object from the current receptacle\n3. go to the next relevant receptacle\n4. move the object to the destination\n5. go to the next relevant receptacle\n6. take the target object from the current receptacle"
+    }
+  }
+}
